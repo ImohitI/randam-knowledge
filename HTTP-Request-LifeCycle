@@ -1,0 +1,16 @@
+Generic Understanding
+What happens if you go to www.google.com
+
+1.First the browser needs to translate www.google.com to an IP address if it does not already know it. If it know it then nothing happens.
+If it does not know it , it contacts a DNS server to resolve the name.
+
+2.Then the browser will open a TCP connection to the IP address of google and send a HTTP GET request over. In this example it will be
+GET / HTTP/ 1.1
+Host : www.google.com
+
+3.The server software will get this HTTP request. It will generate a HTTP response and send that back through the TCP connection.
+
+4.When the browser gets the response , it typically renders it on screen. The HTTP request is now done. A click on search will send a new request to the server.
+
+GET , PUT, POST , DELETE and others are other http request methods. 
+Cookies are commonly used to identify the same user across multiple HTTP requests, called sessions. Therefore these cookies are called session cookies.
